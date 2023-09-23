@@ -6,6 +6,7 @@
 	--sea-green: #5c946eff;
 	--cambridge-blue: #80c2afff;
 	--non-photo-blue: #a0dde6ff;
+	--off-white: rgb(233, 252, 255);
 }
 
 * {
@@ -121,6 +122,48 @@ header .navbar ul li a:hover {
 	color: var(--cambridge-blue);
 	font-size: 2rem;
 	font-weight: normal;
+}
+
+.about {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: linear-gradient(
+		30deg,
+		rgb(24, 24, 24),
+		rgb(55, 55, 55) 85%,
+		rgb(70, 70, 70)
+	);
+}
+
+.about .image {
+	flex: 1 1 10rem;
+	padding: 4rem 0;
+}
+
+.about .content {
+	flex: 1 1 40rem;
+	padding: 4rem 0;
+}
+
+.about .content h3 {
+	color: var(--sea-green);
+	font-size: 8rem;
+	padding-bottom: 3rem;
+	text-align: center;
+}
+
+.about .content h1 {
+	color: var(--cambridge-blue);
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+.about .content p {
+	color: var(--off-white);
+	font-size: 2rem;
+	padding-bottom: 1rem;
 }
 
 /* Media Queries */
