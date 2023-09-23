@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    proxy-pass:
+        image: foster-framework-apache
+        build:
+            context: ./containers/proxy-pass/
+        ports:
+            - "8080:80"
+            # - '443:443'
+        volumes:
+            - ./website:/usr/local/apache2/htdocs
