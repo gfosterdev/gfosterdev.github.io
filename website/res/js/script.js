@@ -22,6 +22,18 @@ function getData() {
 		.done(function (result) {
 			console.log("done");
 			console.log(result);
+			result.data.projects.edges.forEach((item) => {
+				var d = item.node;
+				var title = d.title;
+				var link = d.projectMeta.githubLink;
+				var finished = d.projectMeta.projectFinished;
+				console.log(title, link, finished);
+				var project = $("<div>");
+				project.addClass("projectItem");
+				project.append($("<h3>").html(title));
+				// project.append($)
+				$(".projectList").append(project);
+			});
 		})
 		.fail(function () {
 			console.log("fail");
