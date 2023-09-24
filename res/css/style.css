@@ -194,8 +194,9 @@ header .navbar ul li a:hover {
 
 .projects {
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	background: linear-gradient(
 		150deg,
@@ -205,10 +206,33 @@ header .navbar ul li a:hover {
 	);
 }
 
-.projects .content h3 {
+.projects h3 {
 	color: var(--sea-green);
 	font-size: 5rem;
 	padding-bottom: 1rem;
+}
+
+.projects .projectList {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: left;
+	width: 100%;
+}
+
+.projects .projectList .projectItem {
+	flex: 1;
+	font-size: 2rem;
+	margin: 1rem;
+	text-align: center;
+	width: 100%;
+	padding: 1rem;
+	box-shadow: 0 0.3rem 1rem 0.5rem var(--non-photo-blue);
+	border-radius: 0.4rem;
+}
+
+.projects .projectList .projectItem h3 {
+	font-size: 2rem;
 }
 
 .contact {
@@ -294,5 +318,11 @@ header .navbar ul li a:hover {
 	header .navbar.nav-toggle {
 		transform: scaleY(1);
 		opacity: 1;
+	}
+
+	.projects .projectList {
+		flex-direction: column;
+		align-items: center;
+		justify-content: left;
 	}
 }
