@@ -19,6 +19,7 @@
 	border: none;
 	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 	text-transform: capitalize;
+	scroll-behavior: smooth !important;
 }
 
 *::selection {
@@ -94,6 +95,17 @@ header .navbar ul li a:hover {
 	display: none;
 }
 
+#linkedin {
+	font-size: 3rem;
+	color: var(--non-photo-blue);
+	margin: 2rem 0;
+}
+
+#linkedin:hover {
+	cursor: pointer;
+	color: white;
+}
+
 .home {
 	display: flex;
 	align-items: center;
@@ -164,6 +176,74 @@ header .navbar ul li a:hover {
 	color: var(--off-white);
 	font-size: 2rem;
 	padding-bottom: 1rem;
+}
+
+.about .content ul {
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	padding: 1rem;
+}
+
+.about .content ul li {
+	text-align: center;
+	color: var(--non-photo-blue);
+	font-size: 2.5rem;
+	margin: 1rem 0;
+}
+
+.projects {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: linear-gradient(
+		150deg,
+		rgb(24, 24, 24),
+		rgb(55, 55, 55) 85%,
+		rgb(70, 70, 70)
+	);
+}
+
+.projects .content h3 {
+	color: var(--sea-green);
+	font-size: 5rem;
+	padding-bottom: 1rem;
+}
+
+.contact {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	/* background: linear-gradient(
+		0deg,
+		rgb(24, 24, 24),
+		rgb(55, 55, 55) 85%,
+		rgb(70, 70, 70)
+	); */
+	background: rgb(55, 55, 55);
+	min-height: 10vh;
+}
+
+.contact .content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	/* flex-wrap: wrap; */
+}
+
+.contact .content .left {
+	flex: 1 1 40rem;
+	padding: 4rem 0;
+	text-align: left;
+}
+
+.contact .content .right {
+	flex: 1 1;
+	padding: 4rem 0;
+	text-align: right;
 }
 
 /* Media Queries */

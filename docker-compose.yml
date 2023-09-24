@@ -1,3 +1,4 @@
+# Wordpress Setup
 version: "3.9"
 
 services:
@@ -7,6 +8,37 @@ services:
             context: ./containers/proxy-pass/
         ports:
             - "8080:80"
-            # - '443:443'
         volumes:
             - ./website:/usr/local/apache2/htdocs
+    wordpress:
+        depends_on:
+            - db
+        image: foster-framework-wordpress
+        build:
+            context: ./containers/wordpress/
+        ports:
+            - "8000:80"
+        environment:
+            WORDPRESS_DB_HOST: db
+            WORDPRESS_DB_USER: georgeuser
+            WORDPRESS_DB_PASSWORD: georgepass
+            WORDPRESS_DB_NAME: ffdb
+        volumes:
+            - ./wordpress:/var/www/html
+    db:
+        image: foster-framework-mysql
+        build:
+            context: ./containers/mysql/
+        restart: always
+        environment:
+            MYSQL_DATABASE: ffdb
+            MYSQL_USER: georgeuser
+            MYSQL_PASSWORD: georgepass
+            MYSQL_RANDOM_ROOT_PASSWORD: "1"
+        # ports:
+        #     - "3306:33060"
+        volumes:
+            - db:/var/lib/mysql
+
+volumes:
+    db:
