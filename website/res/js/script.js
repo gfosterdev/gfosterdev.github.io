@@ -1,3 +1,36 @@
+function getData() {
+	$.ajax({
+		url: "http://localhost:8000/graphql",
+		contentType: "application/JSON",
+		method: "POST",
+		data: JSON.stringify({
+			query: `{
+				projects {
+				  edges {
+					node {
+					  title
+					  projectMeta {
+						projectFinished
+						githubLink
+					  }
+					}
+				  }
+				}
+			}`,
+		}),
+	})
+		.done(function (result) {
+			console.log("done");
+			console.log(result);
+		})
+		.fail(function () {
+			console.log("fail");
+		})
+		.always(function () {
+			console.log("always");
+		});
+}
+
 $(document).ready(function () {
 	$("#menu").click(function () {
 		$(this).toggleClass("fa-times");
@@ -20,4 +53,7 @@ $(document).ready(function () {
 			alert("Please allow popups for this website.");
 		}
 	});
+
+	// Data access test from GraphQL endpoint
+	getData();
 });
