@@ -214,20 +214,21 @@ header .navbar ul li a:hover {
 
 .projects .projectList {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: left;
+	flex-flow: row wrap;
+	/* align-items: stretch; */
+	justify-content: space-evenly;
 	width: 100%;
 }
 
 .projects .projectList .projectItem {
-	flex: 1;
+	/* flex: 1; */
+	flex-basis: content;
 	font-size: 2rem;
 	margin: 1rem;
 	text-align: center;
-	width: 100%;
-	padding: 1rem;
-	box-shadow: 0 0.3rem 1rem 0.5rem var(--non-photo-blue);
+	/* width: 100%; */
+	padding: 2rem 5rem;
+	background: var(--eerie-black);
 	border-radius: 0.4rem;
 }
 
