@@ -2,6 +2,19 @@
 version: "3.9"
 
 services:
+    engine:
+        image: foster-framework-node
+        build: ./containers/node/
+        volumes:
+            - ./react-app:/var/www/app
+        environment:
+            - NODE_ENV=development
+            - PORT=3000
+            - DEBUG=server,server:*
+        command:
+            sh -c 'npm i && npm start'
+            # sh -c 'nodemon --exec npm start'
+            # tail -F anything # Keep container running without booting node server for npm access
     proxy-pass:
         image: foster-framework-apache
         build:

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+:root {
+	--background-colour: #181818ff;
+	--sidebar-colour: rgb(39, 39, 39);
+	--deep-sky-blue: #30c5ffff;
+	--sea-green: #5c946eff;
+	--cambridge-blue: #80c2afff;
+	--non-photo-blue: #a0dde6ff;
+	--off-white: rgb(233, 252, 255);
+}
+
+* {
+	font-family: "PT Mono", monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	/* transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); */
+	/* text-transform: capitalize; */
+	scroll-behavior: smooth !important;
+}

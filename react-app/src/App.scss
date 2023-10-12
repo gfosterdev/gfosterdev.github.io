@@ -1,0 +1,12 @@
+.app {
+	background-color: var(--background-colour);
+	width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.app .sections {
+	padding: 3rem;
+}
