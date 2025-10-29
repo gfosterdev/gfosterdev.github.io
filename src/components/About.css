@@ -1,0 +1,99 @@
+.about {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6rem 7%;
+	background: #ffffff;
+}
+
+.about-container {
+	max-width: 1200px;
+	width: 100%;
+}
+
+.about-content {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.about-greeting {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.about-headline {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #0077b5;
+	margin-bottom: 2rem;
+	line-height: 1.4;
+}
+
+.about-paragraph {
+	font-size: 1.1rem;
+	color: #555;
+	line-height: 1.8;
+	margin-bottom: 1.5rem;
+}
+
+.skills-intro {
+	margin-bottom: 1rem;
+}
+
+.skills-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.skills-list li {
+	padding: 1rem 1.5rem;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	border-radius: 8px;
+	font-weight: 500;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+	.about {
+		padding: 4rem 5%;
+	}
+
+	.about-greeting {
+		font-size: 2rem;
+	}
+
+	.about-headline {
+		font-size: 1.6rem;
+	}
+
+	.about-paragraph {
+		font-size: 1rem;
+	}
+
+	.skills-list {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.about-greeting {
+		font-size: 1.8rem;
+	}
+
+	.about-headline {
+		font-size: 1.4rem;
+	}
+}
