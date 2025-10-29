@@ -8,12 +8,26 @@ export interface Project {
 	description: string;
 	technologies: string[];
 	link?: string;
+	github?: string;
+	image?: string;
 }
 
 export interface SocialLink {
 	platform: string;
 	url: string;
 	icon: string;
+}
+
+export interface WorkExperience {
+	id: string;
+	company: string;
+	title: string;
+	employmentType?: string;
+	startDate: string;
+	endDate?: string;
+	location?: string;
+	description?: string;
+	technologies?: string[];
 }
 
 export interface PersonalInfo {
