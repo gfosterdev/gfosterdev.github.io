@@ -12,7 +12,8 @@ export const personalInfo: PersonalInfo = {
 	location: "Norfolk, England",
 	email: "gfoster.dev@gmail.com",
 	bio: [
-		"Full-Stack web developer with 9+ years of experience working with ColdFusion/Lucee to develop customer tailored applications for both public and internal use.",
+		"Full-Stack web developer with 11 years of experience working with ColdFusion/Lucee to develop customer tailored applications for both public and internal use.",
+		"Currently working as a Software Developer at Lead Forensics, where I contribute to building scalable web solutions for enterprise clients.",
 		"Whilst most proficient with ColdFusion/Lucee, I have experience building applications in many various languages such as JavaScript, C#, and Python.",
 		"I have had the opportunity to work on projects of various sizes - ranging from simple data-in/data-out applications to fully autonomous interactable communication and administration systems.",
 	],
@@ -27,7 +28,7 @@ export const personalInfo: PersonalInfo = {
 		{ name: "Microsoft Azure" },
 		{ name: "Project Management" },
 	],
-	experience: "9+ years",
+	experience: "11 years",
 	currentRole: "Software Developer",
 };
 
@@ -40,6 +41,15 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const projects: Project[] = [
+	{
+		id: "portfolio-website",
+		title: "Portfolio Website",
+		description:
+			"A modern, responsive personal portfolio website built with React and TypeScript. Features a clean design with sections for about, projects, and contact information. Demonstrates proficiency in modern web development practices and component-based architecture.",
+		technologies: ["React", "TypeScript", "Vite", "CSS"],
+		link: "https://gfosterdev.github.io/",
+		github: "https://github.com/gfosterdev/gfosterdev.github.io",
+	},
 	{
 		id: "smithandwilliamson-ui",
 		title: "Smith & Williamson UI",

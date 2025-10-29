@@ -1,4 +1,5 @@
 import type { PersonalInfo } from "../types/portfolio";
+import georgePortrait from "../assets/george-colour.jpg";
 import "./Hero.css";
 
 interface HeroProps {
@@ -9,6 +10,13 @@ const Hero = ({ personalInfo }: HeroProps) => {
 	return (
 		<section id="home" className="hero">
 			<div className="hero-content">
+				<div className="hero-portrait">
+					<img
+						src={georgePortrait}
+						alt={`${personalInfo.firstName} ${personalInfo.lastName}`}
+						className="portrait-image"
+					/>
+				</div>
 				<h3 className="hero-firstname">{personalInfo.firstName}</h3>
 				<h3 className="hero-lastname">{personalInfo.lastName}</h3>
 				<h1 className="hero-title">

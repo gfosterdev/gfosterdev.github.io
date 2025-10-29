@@ -35,13 +35,6 @@ const About = ({ personalInfo }: AboutProps) => {
 							</ul>
 						</>
 					)}
-
-					<p className="about-paragraph">
-						Currently, I'm still with the team I've worked with for
-						the last {personalInfo.experience} as a{" "}
-						{personalInfo.currentRole} helping develop and manage
-						existing and new products.
-					</p>
 				</div>
 			</div>
 		</section>
