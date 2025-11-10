@@ -5,7 +5,7 @@ const Projects = () => {
 	return (
 		<section id="projects" className="projects">
 			<div className="projects-container">
-				<h3 className="projects-title">Some Projects</h3>
+				<h3 className="projects-title">Personal Projects</h3>
 				<div className="projects-list">
 					{projects.length === 0 ? (
 						<p className="projects-placeholder">

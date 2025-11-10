@@ -1,0 +1,224 @@
+.work-experience {
+	padding: 80px 0;
+	background: linear-gradient(
+		135deg,
+		var(--battleship-gray) 0%,
+		var(--feldgrau) 100%
+	);
+	color: var(--timberwolf);
+}
+
+.work-experience .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.work-experience h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+	font-weight: 700;
+}
+
+.experience-timeline {
+	position: relative;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.experience-timeline::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	background: var(--ash-gray);
+}
+
+.experience-item {
+	position: relative;
+	padding-left: 40px;
+	margin-bottom: 3rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid var(--ash-gray);
+}
+
+.experience-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.experience-item::before {
+	content: "";
+	position: absolute;
+	left: -6px;
+	top: 5px;
+	width: 15px;
+	height: 15px;
+	background: var(--timberwolf);
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px var(--battleship-gray);
+}
+
+.experience-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2rem;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+.experience-item h3 {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+
+.experience-item h4 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	opacity: 0.9;
+	margin-bottom: 0.5rem;
+}
+
+.experience-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 0.3rem;
+	text-align: right;
+}
+
+.employment-type {
+	font-size: 0.9rem;
+	opacity: 0.8;
+	font-weight: 500;
+}
+
+.date-range {
+	font-size: 0.95rem;
+	font-weight: 500;
+	opacity: 0.9;
+}
+
+.location {
+	font-size: 0.9rem;
+	opacity: 0.8;
+}
+
+.experience-description {
+	margin: 1rem 0;
+	line-height: 1.6;
+	opacity: 0.95;
+	font-size: 1rem;
+}
+
+.experience-technologies {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.tech-tag {
+	background: rgba(232, 227, 222, 0.2);
+	padding: 0.4rem 0.8rem;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(232, 227, 222, 0.3);
+	transition: all 0.3s ease;
+	color: var(--timberwolf);
+}
+
+/* Cloud & Infrastructure - Cool blue-gray tones */
+.tech-tag.tech-cloud {
+	background: rgba(107, 127, 115, 0.4);
+	border-color: rgba(107, 127, 115, 0.7);
+	color: #d9f2ea;
+}
+
+/* Programming Languages - Warm earth tones */
+.tech-tag.tech-language {
+	background: rgba(217, 204, 201, 0.4);
+	border-color: rgba(217, 204, 201, 0.7);
+	color: #ffffff;
+}
+
+/* Frameworks & Libraries - Muted green tones */
+.tech-tag.tech-framework {
+	background: rgba(168, 168, 154, 0.4);
+	border-color: rgba(168, 168, 154, 0.7);
+	color: #f5f5e8;
+}
+
+/* Databases - Deep feldgrau tones */
+.tech-tag.tech-database {
+	background: rgba(61, 84, 81, 0.5);
+	border-color: rgba(61, 84, 81, 0.8);
+	color: #d9f2ea;
+}
+
+/* Skills & Methodologies - Ash gray accent */
+.tech-tag.tech-skill {
+	background: rgba(168, 168, 154, 0.5);
+	border-color: rgba(217, 204, 201, 0.7);
+	color: #ffffff;
+}
+
+/* Other/Uncategorized - Default timberwolf */
+.tech-tag.tech-other {
+	background: rgba(232, 227, 222, 0.2);
+	border-color: rgba(232, 227, 222, 0.4);
+	color: var(--timberwolf);
+}
+
+.tech-tag:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+	.work-experience {
+		padding: 60px 0;
+	}
+
+	.work-experience h2 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.experience-header {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.experience-meta {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.experience-item h3 {
+		font-size: 1.3rem;
+	}
+
+	.experience-item h4 {
+		font-size: 1.1rem;
+	}
+
+	.experience-timeline::before {
+		left: 0;
+	}
+
+	.experience-item {
+		padding-left: 30px;
+	}
+
+	.experience-item::before {
+		left: -6px;
+	}
+}
