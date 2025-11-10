@@ -4,7 +4,11 @@
 	align-items: center;
 	justify-content: center;
 	padding: 6rem 7%;
-	background: #ffffff;
+	background: var(--timberwolf);
+}
+
+[data-theme="dark"] .about {
+	background: var(--dark-bg-primary);
 }
 
 .about-container {
@@ -20,21 +24,21 @@
 .about-greeting {
 	font-size: 2.5rem;
 	font-weight: 700;
-	color: #333;
+	color: var(--feldgrau);
 	margin-bottom: 1rem;
 }
 
 .about-headline {
 	font-size: 2rem;
 	font-weight: 600;
-	color: #0077b5;
+	color: var(--battleship-gray);
 	margin-bottom: 2rem;
 	line-height: 1.4;
 }
 
 .about-paragraph {
 	font-size: 1.1rem;
-	color: #555;
+	color: var(--feldgrau);
 	line-height: 1.8;
 	margin-bottom: 1.5rem;
 }
@@ -54,16 +58,32 @@
 
 .skills-list li {
 	padding: 1rem 1.5rem;
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	background: linear-gradient(
+		135deg,
+		var(--battleship-gray) 0%,
+		var(--feldgrau) 100%
+	);
 	color: white;
 	border-radius: 8px;
 	font-weight: 500;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+[data-theme="dark"] .skills-list li {
+	background: linear-gradient(
+		135deg,
+		var(--dark-accent) 0%,
+		var(--dark-bg-tertiary) 100%
+	);
+}
+
 .skills-list li:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+	box-shadow: 0 10px 20px rgba(107, 127, 115, 0.5);
+}
+
+[data-theme="dark"] .skills-list li:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
