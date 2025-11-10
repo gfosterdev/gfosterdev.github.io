@@ -7,6 +7,10 @@
 	background: var(--timberwolf);
 }
 
+[data-theme="dark"] .about {
+	background: var(--dark-bg-primary);
+}
+
 .about-container {
 	max-width: 1200px;
 	width: 100%;
@@ -65,9 +69,21 @@
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+[data-theme="dark"] .skills-list li {
+	background: linear-gradient(
+		135deg,
+		var(--dark-accent) 0%,
+		var(--dark-bg-tertiary) 100%
+	);
+}
+
 .skills-list li:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 10px 20px rgba(107, 127, 115, 0.5);
+}
+
+[data-theme="dark"] .skills-list li:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {

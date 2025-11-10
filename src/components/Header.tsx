@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
 
-const Header = () => {
+interface HeaderProps {
+	theme: "light" | "dark";
+	toggleTheme: () => void;
+}
+
+const Header = ({ theme, toggleTheme }: HeaderProps) => {
 	const [activeSection, setActiveSection] = useState("home");
 	const [menuOpen, setMenuOpen] = useState(false);
 
@@ -61,13 +66,27 @@ const Header = () => {
 				<span>gfoster.dev</span>
 			</a>
 
-			<button
-				className={`menu-toggle ${menuOpen ? "active" : ""}`}
-				onClick={() => setMenuOpen(!menuOpen)}
-				aria-label="Toggle menu"
-			>
-				<i className="fas fa-bars"></i>
-			</button>
+			<div className="header-controls">
+				<button
+					className="theme-toggle"
+					onClick={toggleTheme}
+					aria-label="Toggle theme"
+				>
+					<i
+						className={`fas fa-${
+							theme === "light" ? "moon" : "sun"
+						}`}
+					></i>
+				</button>
+
+				<button
+					className={`menu-toggle ${menuOpen ? "active" : ""}`}
+					onClick={() => setMenuOpen(!menuOpen)}
+					aria-label="Toggle menu"
+				>
+					<i className="fas fa-bars"></i>
+				</button>
+			</div>
 
 			<nav className={`navbar ${menuOpen ? "active" : ""}`}>
 				<ul>

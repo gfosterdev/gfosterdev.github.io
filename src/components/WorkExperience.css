@@ -8,6 +8,15 @@
 	color: var(--timberwolf);
 }
 
+[data-theme="dark"] .work-experience {
+	background: linear-gradient(
+		135deg,
+		var(--dark-bg-tertiary) 0%,
+		var(--dark-bg-secondary) 100%
+	);
+	color: var(--dark-text-primary);
+}
+
 .work-experience .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -60,6 +69,11 @@
 	background: var(--timberwolf);
 	border-radius: 50%;
 	box-shadow: 0 0 0 4px var(--battleship-gray);
+}
+
+[data-theme="dark"] .experience-item::before {
+	background: var(--dark-text-primary);
+	box-shadow: 0 0 0 4px var(--dark-accent);
 }
 
 .experience-header {

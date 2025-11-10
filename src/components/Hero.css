@@ -11,6 +11,14 @@
 	);
 }
 
+[data-theme="dark"] .hero {
+	background: linear-gradient(
+		135deg,
+		var(--dark-bg-primary) 0%,
+		var(--dark-bg-secondary) 100%
+	);
+}
+
 .hero-content {
 	text-align: center;
 	max-width: 900px;
@@ -34,6 +42,11 @@
 	image-rendering: crisp-edges;
 	backface-visibility: hidden;
 	transform: translateZ(0);
+}
+
+[data-theme="dark"] .portrait-image {
+	border-color: var(--dark-accent);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .hero-firstname,
@@ -82,10 +95,19 @@
 	margin-top: 1rem;
 }
 
+[data-theme="dark"] .social-icon {
+	background: var(--dark-accent);
+}
+
 .social-icon:hover {
 	background: var(--battleship-gray);
 	transform: translateY(-5px);
 	box-shadow: 0 10px 20px rgba(107, 127, 115, 0.5);
+}
+
+[data-theme="dark"] .social-icon:hover {
+	background: var(--dark-accent-light);
+	box-shadow: 0 10px 20px rgba(138, 157, 143, 0.5);
 }
 
 @keyframes fadeInUp {
