@@ -4,7 +4,11 @@
 	align-items: center;
 	justify-content: center;
 	padding: 2rem 7%;
-	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	background: linear-gradient(
+		135deg,
+		var(--timberwolf) 0%,
+		var(--silver) 100%
+	);
 }
 
 .hero-content {
@@ -24,8 +28,8 @@
 	border-radius: 50%;
 	object-fit: cover;
 	object-position: center;
-	border: 5px solid #fff;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	border: 5px solid var(--timberwolf);
+	box-shadow: 0 10px 30px rgba(61, 84, 81, 0.4);
 	image-rendering: -webkit-optimize-contrast;
 	image-rendering: crisp-edges;
 	backface-visibility: hidden;
@@ -36,7 +40,7 @@
 .hero-lastname {
 	font-size: 4rem;
 	font-weight: 700;
-	color: #333;
+	color: var(--feldgrau);
 	margin: 0.2rem 0;
 	animation: fadeInUp 0.8s ease forwards;
 	opacity: 0;
@@ -53,7 +57,7 @@
 .hero-title {
 	font-size: 1.8rem;
 	font-weight: 400;
-	color: #555;
+	color: var(--battleship-gray);
 	margin: 2rem 0;
 	line-height: 1.6;
 	animation: fadeInUp 0.8s ease forwards;
@@ -67,7 +71,7 @@
 	justify-content: center;
 	width: 60px;
 	height: 60px;
-	background: #0077b5;
+	background: var(--feldgrau);
 	color: white;
 	font-size: 2rem;
 	border-radius: 50%;
@@ -79,9 +83,9 @@
 }
 
 .social-icon:hover {
-	background: #005885;
+	background: var(--battleship-gray);
 	transform: translateY(-5px);
-	box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+	box-shadow: 0 10px 20px rgba(107, 127, 115, 0.5);
 }
 
 @keyframes fadeInUp {
