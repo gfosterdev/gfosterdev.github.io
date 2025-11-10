@@ -9,6 +9,14 @@ const Header = () => {
 		const handleScroll = () => {
 			const sections = ["home", "about", "projects", "contact"];
 			const scrollPosition = window.scrollY + 100;
+			const windowHeight = window.innerHeight;
+			const documentHeight = document.documentElement.scrollHeight;
+
+			// Check if we're at the bottom of the page
+			if (window.scrollY + windowHeight >= documentHeight - 50) {
+				setActiveSection("contact");
+				return;
+			}
 
 			for (const section of sections) {
 				const element = document.getElementById(section);
@@ -27,6 +35,7 @@ const Header = () => {
 			}
 		};
 
+		handleScroll(); // Call on mount
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
